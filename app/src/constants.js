@@ -4,49 +4,49 @@ export const supportedNetworks = {
         'type': 'EVM',
         'logo': 'sepolia.jpg',
         'domain': 2,
-        'chainid': 11155111
+        'chainId': 11155111
     }, {
         'name': 'Rococo',
         'type': 'Substrate',
         'logo': 'rococo.jpg',
         'domain': 3,
-        'chainid': 5231
+        'chainId': 5231
     }, {
         'name': 'Cronos',
         'type': 'EVM',
         'logo': 'cronos.png',
         'domain': 5,
-        'chainid': 338
+        'chainId': 338
     }, {
         'name': 'Holesky',
         'type': 'EVM',
         'logo': 'holesky.png',
         'domain': 6,
-        'chainid': 17000
+        'chainId': 17000
     }, {
         'name': 'Mumbai',
         'type': 'EVM',
         'logo': 'mumbai.svg',
         'domain': 7,
-        'chainid': 80001
+        'chainId': 80001
     }, {
         'name': 'Arbitrum Sepolia',
         'type': 'EVM',
         'logo': 'arbitrum.png',
         'domain': 8,
-        'chainid': 421614
+        'chainId': 421614
     }, {
         'name': 'Gnosis Chiado',
         'type': 'EVM',
         'logo': 'gnosis.png',
         'domain': 9,
-        'chainid': 10200
+        'chainId': 10200
     }, {
         'name': 'Base Sepolia',
         'type': 'EVM',
         'logo': 'base.png',
         'domain': 10,
-        'chainid': 84532
+        'chainId': 84532
     }],
     mainnet: [
         {
@@ -54,44 +54,44 @@ export const supportedNetworks = {
             'type': 'EVM',
             'logo': 'ethereum.png',
             'domain': 1,
-            'chainid': 1
+            'chainId': 1
         },
         {
             'name': 'Khala',
             'type': 'Substrate',
             'logo': 'khala.png',
             'domain': 2,
-            'chainid': 5232
+            'chainId': 5232
         },{
             'name': 'Phala',
             'type': 'Substrate',
             'logo': 'phala.png',
             'domain': 3,
-            'chainid': 5233
+            'chainId': 5233
         },{
             'name': 'Cronos',
             'type': 'EVM',
             'logo': 'cronos.png',
             'domain': 4,
-            'chainid': 25
+            'chainId': 25
         },{
             'name': 'Base',
             'type': 'EVM',
             'logo': 'base.png',
             'domain': 5,
-            'chainid': 8453
+            'chainId': 8453
         },{
             'name': 'Gnosis',
             'type': 'EVM',
             'logo': 'gnosis.png',
             'domain': 6,
-            'chainid': 100
+            'chainId': 100
         },{
             'name': 'Polygon',
             'type': 'EVM',
             'logo': 'polygon.webp',
             'domain': 7,
-            'chainid': 137
+            'chainId': 137
         }
     ]
 }
@@ -111,3 +111,19 @@ export const TransferState = {
     11: 'Start new transfer',
     12: 'Unknown'
 }
+
+export const FungibleTransferState = {
+    MISSING_SOURCE_NETWORK: 0,
+    MISSING_DESTINATION_NETWORK: 1,
+    MISSING_RESOURCE: 2,
+    MISSING_RESOURCE_AMOUNT: 3,
+    MISSING_DESTINATION_ADDRESS: 4,
+    WALLET_NOT_CONNECTED: 5,
+    WRONG_CHAIN: 6,
+    PENDING_APPROVALS: 7,
+    PENDING_TRANSFER: 8,
+    WAITING_USER_CONFIRMATION: 9,
+    WAITING_TX_EXECUTION: 10,
+    COMPLETED: 11,
+    UNKNOWN: 12
+  }

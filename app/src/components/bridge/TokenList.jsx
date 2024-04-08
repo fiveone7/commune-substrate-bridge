@@ -34,7 +34,7 @@ function TokenList(props) {
                                 <Flex gap={2} mr={6}>
                                     <Image borderRadius={'50%'} fit={'cover'} src={'/commune-logo.svg'} w={6}/>
                                     {/* <Image borderRadius={'50%'} fit={'cover'} src={`assets/${token.logo}`} w={6}/> */}
-                                    <Text fontSize={20}>{token.resource.symbol}</Text>
+                                    <Text fontSize={20}>{token.resource.symbol} (to {token.toDomain.name})</Text>
                                 </Flex>
                             </Button>
                         )
@@ -42,7 +42,6 @@ function TokenList(props) {
                 </Stack>
             </CardBody>
         </Card>
-        
     )
 }
 

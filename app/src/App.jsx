@@ -10,7 +10,7 @@ import Home from './Home';
 // import Footer from './layout/Footer';
 import Bridge from './Bridge';
 import Explorer from './Explorer';
-import AppStateContext from './AppState';
+import AppStateContext, { ConfigContext, WalletContext, walletInfo } from './AppState';
 
 function App() {
 
@@ -22,19 +22,27 @@ function App() {
       toNet: '',
       toToken: '',
       toAddr: ''
-  }}>
-      <ChakraProvider theme={theme}>
-        <Router>
-          <Header/>
-            <Routes>
-              <Route path='/' element={<Home />}/>
-              <Route path='/home' element={<Home />}/>
-              <Route path='/bridge' element={<Bridge />}/>
-              <Route path='/explorer' element={<Explorer />}/>
-            </Routes>
-          {/* <Footer/> */}
-        </Router>
-      </ChakraProvider>
+    }}>
+      <WalletContext.Provider value={walletInfo}>
+        <ConfigContext.Provider value={{
+        walletConnectOptions: {
+          projectId: '3432a77367104e551fdcc9759fd0e94f'
+        }
+      }}>
+          <ChakraProvider theme={theme}>
+            <Router>
+              <Header />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/home' element={<Home />} />
+                <Route path='/bridge' element={<Bridge />} />
+                <Route path='/explorer' element={<Explorer />} />
+              </Routes>
+              {/* <Footer/> */}
+            </Router>
+          </ChakraProvider>
+        </ConfigContext.Provider>
+      </WalletContext.Provider>
     </AppStateContext.Provider>
   );
 }
